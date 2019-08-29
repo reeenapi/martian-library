@@ -1,8 +1,8 @@
 import React from 'react';
-import Query from 'react-apollo';
+import { Query } from 'react-apollo';
 import gql from 'graphql-tag';
 
-const LibraryQuery  = gql `
+const LibraryQuery = gql`
   {
     items {
       id
@@ -16,7 +16,7 @@ const LibraryQuery  = gql `
 
 export default () => (
   <Query query={LibraryQuery}>
-    {({data, loading}) => (
+    {({ data, loading }) => (
       <div>
         {loading
           ? 'loading...'
